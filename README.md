@@ -1,7 +1,7 @@
 # COVID1
 
 def normalize_data(n_cases, n_people, scale):
-    # Calculate the number of cases per its population scaled to the given scale
+    #  Calculate the number of cases per its population
     norm_cases = []
     for idx, n in enumerate(n_cases):
         norm_cases.append(n / n_people[idx] * scale)
@@ -16,12 +16,11 @@ n_people = [9550227, 13530519, 3359527, 3322373, 2938429, 2630254,
 n_covid  = [644, 529, 38, 29, 148, 28, 41, 62, 23, 27, 27, 33, 
              16, 40, 20, 5, 4]  # 2021-09-21
 
-# Calculate total population and total new cases
 sum_people = sum(n_people)
 sum_covid = sum(n_covid)
-
-# Normalize COVID-19 cases per 1 million people
 norm_covid = normalize_data(n_covid, n_people, 1000000)
+# The new cases per 1 million people
+
 
 # Print population by region
 print('### Korean Population by Region')
